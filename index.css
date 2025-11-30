@@ -26,7 +26,7 @@
 
 /* 2. Set font and remove the margin of the whole webpage */
 /* TODO 8: Assign a selector to provide basic styles to all elements */
-/*selector*/ {
+/*selector*/ * {
     font-family: monospace;
 
     margin: 0;
@@ -38,7 +38,7 @@ body {
 }
 
 /* TODO 9: Fill in the media query list to support responsive design */
-@media /*<media-query-list>*/ {
+@media screen and (max-width:600px) {
     body {
         padding: 2rem 20%;
     }
@@ -193,7 +193,8 @@ section {
 /* TODO 11: Declare the display property to align the children elements horizontally */
 #skill-set {
 
-
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 
     margin-top: 0.5rem;
