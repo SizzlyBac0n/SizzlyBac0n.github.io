@@ -38,9 +38,19 @@ body {
 }
 
 /* TODO 9: Fill in the media query list to support responsive design */
-@media screen and (max-width:600px) {
+@media screen and (max-width:1024px) {
     body {
         padding: 2rem 20%;
+    }
+}
+@media screen and (max-width:768px) {
+    body {
+        padding: 2rem 5%;
+    }
+}
+@media screen and (max-width:480px) {
+    body {
+        padding: 1rem 5%;
     }
 }
 
@@ -112,9 +122,19 @@ nav > *:last-child {
 }
 
 /* TODO 9: Fill in the media query list to support responsive design */
-@media /*<media-query-list>*/ {
+@media screen and (max-width: 1024px) {
     #anchor-list-trigger {
         display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    #anchor-list-trigger {
+        display: inline-flex;
+    }
+}
+@media screen and (max-width: 480px) {
+    #anchor-list-trigger {
+        display: inline-flex;
     }
 }
 
@@ -133,13 +153,27 @@ nav > *:last-child {
 }
 
 /* TODO 9: Fill in the media query list to support responsive design */
-@media /*<media-query-list>*/ {
+@media screen and (max-width: 1024px) {
     #anchor-list {
         display: flex;
 
         position: static;
 
         width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #anchor-list {
+        display: var(--show-anchor-list);
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    #anchor-list {
+        display: var(--show-anchor-list);
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -151,7 +185,7 @@ nav > *:last-child {
 
 /* TODO 10: Fill in the pseudo-class to change the color of
  * the link entry in navigation bar when the mouse hangs on it */
-#anchor-list > li:/*pseudo-class*/ {
+#anchor-list > li:hover {
     background-color: var(--primary);
     color: var(--on-primary);
 }
@@ -176,7 +210,7 @@ section {
 /* 5a. Hero section */
 /* TODO 11: Declare the display property to separate the content on the 2 sides */
 #hero {
-
+    display: flex;
 
     justify-content: space-between;
 }
@@ -234,9 +268,13 @@ footer {
  * Give appropriate space against the 2 neighbour sections, and
  * style the border to be thicker.
 */
+hr {
+    margin: 2rem 0;
+    border: 3px solid var(--on-surface-container);
+}
 
 /* TODO 13: Assign a selector to increase the line height of content,
  * but not the headings or functional elements */
-/*selector*/ {
+/*selector*/ p {
     line-height: 150%;
 }
